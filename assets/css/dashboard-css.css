@@ -31,35 +31,31 @@
 	color: rgb(27, 39, 48);
 }
 
-.heading {
-	font-weight: 600;
-}
 
-.heading {
-    font-weight: 600;
-    margin-left: 2%;
-    font-size: 40px;
-}
+
+
 
 .boxes {
+    cursor: pointer;
 	text-align: center;	
 	vertical-align: middle;
 	font-weight: 600;
     width: 20%;
     height: 140px;
-    background: rgb(128, 128, 128);
+    background:rgb(134, 133, 133);
     margin: 2%;
     border: 1px solid #fff;
     border-radius: 10px;
     padding-top: 50px; 
+    color: rgb(54, 50, 50);
 }
 
-.boxes-wrapper
-{
-    
-
-}
-
+.boxes:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+  }
+  
 
 
 

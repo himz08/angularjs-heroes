@@ -1,5 +1,5 @@
 <div ng-controller="httpCntrl">
-<div style="width: 40% ; margin : 0 5%">
+<!-- <div style="width: 30% ; margin : 0 5%">
         <table class="table table-hover">
                 <tr>
                     <th> Heroes List </th>
@@ -18,4 +18,30 @@
             </table>
         </div>
 
-</div>
+</div> -->
+
+
+
+<h2>My Heroes</h2>
+
+<ul class="heroes">
+    <li class="li-block" ng-repeat="heroes in heroesData track by $index">
+      <a class="li-block">
+        <span class="badge li-block">{{heroes.id}}</span> {{heroes.first_name}}
+      </a>
+     <br>
+    </li>
+    <br>
+  </ul>
+
+<!-- <div>
+  <label>Hero name:
+    <input #heroName />
+  </label> -->
+  
+  <!-- <button (click)="add(heroName.value); heroName.value=''">
+    add
+  </button>
+</div> -->
+
+

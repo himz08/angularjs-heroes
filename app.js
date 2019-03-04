@@ -93,6 +93,20 @@
                 templateUrl : 'views/heroes-view.html'
         }
     }}
+
+    var dashboarHeroDetail ={
+
+        name : 'home.topHeroesDetail',
+        url: '/topHeroesDetail',
+        views :{
+            'content-view' : {
+                templateUrl : 'views/hero-details-dashboard.html'
+            }
+
+        }
+        
+
+    }
         
         $urlRouterProvider.otherwise('/login');
         $stateProvider.state(homeState);

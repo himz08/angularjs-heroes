@@ -14,7 +14,7 @@ app.controller('httpCntrl',function($scope, dataFetch , $state,$rootScope){
             var temp = response.data.data;
             $rootScope.topHeroes.push(temp[0]);
             
-            for(var i = 0 ; i < temp.length ; i++)
+            for(var i = 1 ; i < temp.length  ; i++)
             {
                 $rootScope.heroesData.push(temp[i]);
             }
@@ -22,9 +22,9 @@ app.controller('httpCntrl',function($scope, dataFetch , $state,$rootScope){
             dataFetch.fetchData3().then(function(response){
 
                 var temp1 = response.data.data;
-                for(var i = 0 ; i < temp.length ; i++)
+                for(var i = 0 ; i < temp1.length ; i++)
             {
-                $rootScope.heroesData.push(temp[i]);
+                $rootScope.heroesData.push(temp1[i]);
             }
 
 
