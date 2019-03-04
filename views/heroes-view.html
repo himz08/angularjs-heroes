@@ -1,0 +1,21 @@
+<div ng-controller="httpCntrl">
+<div style="width: 40% ; margin : 0 5%">
+        <table class="table table-hover">
+                <tr>
+                    <th> Heroes List </th>
+                    
+                </tr>
+            
+            
+            
+                <tr ng-repeat="heroes in heroesData track by $index" >
+                    <td>{{heroes.first_name | uppercase}}</td>
+                  
+                </tr>
+            
+            
+            
+            </table>
+        </div>
+
+</div>

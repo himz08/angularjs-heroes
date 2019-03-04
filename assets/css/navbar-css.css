@@ -1,0 +1,52 @@
+#navbar-div
+{
+    padding : 20px;
+   
+    
+}
+
+
+.navbar
+
+{
+	padding-bottom: 4rem;
+
+
+
+}
+
+.navbar-brand
+{
+
+
+	font-family: "Ubuntu";
+	font-weight: bold;
+	font-size: 2.5rem;
+}
+
+.nav-item
+{
+	padding: 0 16px;
+
+
+}
+
+.nav-link
+{
+    margin-right: 80px;
+	font-family: "Montserrat";
+}
+
+
+
+.navbar
+{
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.btn
+{
+    margin : 0 10px;
+}
+
