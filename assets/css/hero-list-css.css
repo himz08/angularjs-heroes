@@ -32,10 +32,10 @@
     
   }
   
-  .heroes a:hover {
+  /* .heroes a:hover {
     color:#607D8B;
   }
-  
+   */
   .heroes .badge {
     display: inline-block;
     font-size: small;
@@ -57,7 +57,13 @@
   {
     height: 39.6px;
 }
+.adminCss a:hover {
+  color:rgb(75, 207, 95);
+}
 
+.userCss a:hover {
+  color:rgb(202, 95, 81);
+}
 
   
 /*   

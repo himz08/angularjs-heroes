@@ -1,47 +1,24 @@
+  <!-- List of Heroes - Under Hero Tab -->
+
 <div ng-controller="httpCntrl">
-<!-- <div style="width: 30% ; margin : 0 5%">
-        <table class="table table-hover">
-                <tr>
-                    <th> Heroes List </th>
-                    
-                </tr>
-            
-            
-            
-                <tr ng-repeat="heroes in heroesData track by $index" >
-                    <td>{{heroes.first_name | uppercase}}</td>
-                  
-                </tr>
-            
-            
-            
-            </table>
-        </div>
-
-</div> -->
-
-
 
 <h2>My Heroes</h2>
 
-<ul class="heroes">
-    <li class="li-block" ng-repeat="heroes in heroesData track by $index">
-      <a class="li-block">
+<ul class="heroes" ng-class="{adminCss : isAdmin , userCss : !isAdmin}">
+    <li class="li-block" ng-repeat="heroes in heroesData track by $index"  >
+      <a class="li-block" ui-sref="home.heroes.heroesDetails({id: heroes.id})">
         <span class="badge li-block">{{heroes.id}}</span> {{heroes.first_name}}
       </a>
      <br>
     </li>
     <br>
   </ul>
+  <hr>
+</div>
+<div ui-view="show-details">
 
-<!-- <div>
-  <label>Hero name:
-    <input #heroName />
-  </label> -->
   
-  <!-- <button (click)="add(heroName.value); heroName.value=''">
-    add
-  </button>
-</div> -->
+</div>
+
 
 

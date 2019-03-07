@@ -1,19 +1,25 @@
-<div ng-controller="httpCntrl">
+<!-- Dashboard View -->
+
+<div ng-controller="httpCntrl" ng-show="divBlock">
 <div class="boxes-wrapper">
-    <div class="inline-block boxes">
-      <a>  {{topHeroes[0].first_name}} </a>
+    <div class="inline-block boxes" ui-sref="home.dashboard.topHeroesDetails ({id: topHeroes[0].id})" >
+      <a >  {{topHeroes[0].first_name}} </a>
     </div>
-    <div class="inline-block boxes">
+    <div class="inline-block boxes" ui-sref="home.dashboard.topHeroesDetails ({id: topHeroes[1].id})" >
+            <a >  {{topHeroes[1].first_name}} </a>
+    </div>
+    <div class="inline-block boxes" ui-sref="home.dashboard.topHeroesDetails ({id: topHeroes[2].id})">
+            <a >  {{topHeroes[2].first_name}} </a>
+    </div>
 
-        {{topHeroes[1].first_name}}
-    </div>
-    <div class="inline-block boxes">
-        {{topHeroes[2].first_name}}
-    </div>
-
-    <div class="inline-block boxes">
-        {{topHeroes[3].first_name}}
+    <div class="inline-block boxes" ui-sref="home.dashboard.topHeroesDetails ({id: topHeroes[3].id})">
+            <a >  {{topHeroes[3].first_name}} </a>
     </div>
 </div>
 </div>
 
+<div ui-view="edit-details">
+
+</div>
+<!-- 
+ui-sref="home.dashboard.topHeroesDetails ({id: 'topHeroes[0].id', name: 'topHeroes[0].first_name'})" -->

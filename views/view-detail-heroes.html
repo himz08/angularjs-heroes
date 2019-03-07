@@ -1,0 +1,19 @@
+    <!-- View Details under list of heroes -->
+
+<div ng-controller="heroDetailCntrl">
+    <div ng-show="isAdmin">
+        <h2> {{hero.first_name}} is my Hero</h2>
+        <button ng-click="viewDetails()"> View Details</button>
+
+        <div ng-show="isClicked">
+            <h5 style="display: inline-block;"><strong> First Name :</strong> </h5>
+            <h6 style="display: inline-block;"><span>{{hero.first_name}} </span></h6> <br>
+            <h5 style="display: inline-block;"><strong> Last Name :</strong> </h5>
+            <h6 style="display: inline-block;"><span>{{hero.last_name}} </span></h6><br>
+
+            <h5 style="display: inline-block;"><strong> Id :</strong> </h5>
+            <h6 style="display: inline-block;">{{id}} </h6>
+        </div>
+
+    </div>
+</div>

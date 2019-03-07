@@ -1,11 +1,13 @@
-<div >
-    <h2>{{hero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{hero.id}}</div>
+<!-- Dashboard View Details  -->
+
+<div ng-controller="editCntrl" >
+    <h2>{{hero.first_name}} Details</h2>
+    <div><span>id: </span>{{id}}</div>
     <div>
-      <label>name:
-        <input [(ngModel)]="hero.name" placeholder="name"/>
+      <label>name: 
+        <input ng-model="hero.first_name">
       </label>
     </div>
-    <button ng-click="goBack()">go back</button>
-    <button ng-click="save()">save</button>
+
+    <button ng-click="submit()">Save</button>
   </div>

@@ -1,32 +1,40 @@
 
-
+// Code to fetch data from server
 var app = angular.module("myApp");
 
-app.controller('httpCntrl',function($scope, dataFetch , $state,$rootScope){
 
-    dataFetch.fetchData1().then(function(response){
 
-        $rootScope.topHeroes = response.data.data;
-        $rootScope.heroesData = response.data.data;
 
-        dataFetch.fetchData2().then(function(response){
+app.controller('httpCntrl',['$rootScope', 'dataFetch' , '$rootScope' , '$scope', '$state' ,function($rootScope, dataFetch , $rootScope , $scope, $state){
+    
+
+    $rootScope.divBlock = true;
+    dataFetch.fetchData1().then(function(response1){
+
+        $rootScope.topHeroes = response1.data.data;
+        $rootScope.heroesData = response1.data.data;
+        
+
+        dataFetch.fetchData2().then(function(response2){
             console.log('Fetchin...');
-            var temp = response.data.data;
+            var temp = response2.data.data;
             $rootScope.topHeroes.push(temp[0]);
+            
+
+            
             
             for(var i = 1 ; i < temp.length  ; i++)
             {
                 $rootScope.heroesData.push(temp[i]);
             }
 
-            dataFetch.fetchData3().then(function(response){
+            dataFetch.fetchData3().then(function(response3){
 
-                var temp1 = response.data.data;
+                var temp1 = response3.data.data;
                 for(var i = 0 ; i < temp1.length ; i++)
             {
                 $rootScope.heroesData.push(temp1[i]);
             }
-
 
             })
 
@@ -41,4 +49,4 @@ app.controller('httpCntrl',function($scope, dataFetch , $state,$rootScope){
 
 
 
-})
+}])

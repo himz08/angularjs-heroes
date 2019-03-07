@@ -1,6 +1,6 @@
 var app = angular.module("myApp");
 
-app.controller('loginCntrl', function ($scope, $state, $location, $rootScope) {
+app.controller('loginCntrl', ['$scope', '$state', '$location', '$rootScope', function ($scope, $state, $location, $rootScope) {
 
     $scope.validAdminUsername = 'admin@jungleworks.com';
     $scope.validUserUsename = 'user@jungleworks.com';
@@ -10,31 +10,31 @@ app.controller('loginCntrl', function ($scope, $state, $location, $rootScope) {
     $rootScope.isUser = false;
     $rootScope.isAdmin = false;
 
-    $scope.setCred = function ($rootScope , $state) {
- 
+
+    $scope.setCred = function () {
+
 
         if (($scope.userUsername === $scope.validUserUsename && $scope.userPassword === $scope.validUserPass) || (($scope.userUsername === $scope.validAdminUsername && $scope.userPassword === $scope.validAdminPass))) {
             if ($scope.userUsername === $scope.validUserUsename && $scope.userPassword === $scope.validUserPass) {
-              //  $rootScope.isAdmin = true;
-              //  $rootScope.isUser = false;
-              $location.path('/home/heroes');
-              
+                //  $rootScope.isAdmin = true;
+                $rootScope.isUser = true;
+                $state.go('home.heroes');
+
+
             } else {
-              //  $rootScope.isUser = true;
-              //  $rootScope.isAdmin = false;
-              $location.path('/home/dashboard');
-              
+                //  $rootScope.isUser = true;
+                //  $rootScope.isAdmin = false;
+                $location.path('/home/dashboard');
+
             }
             $scope.error = false;
             localStorage.setItem('username', $scope.userUsername);
             localStorage.setItem('password', $scope.userPassword);
-            alert('Clicked');
-            // $location.path('/home');
+
+
         } else {
             $scope.error = true;
         }
     }
-    $scope.abc = function () {
-        alert("Clicked");
-    }
-});
+
+}]);
